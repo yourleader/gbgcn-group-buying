@@ -1,0 +1,282 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String    @id @default(cuid())
+  email           String    @unique
+  username        String    @unique
+  firstName       String
+  lastName        String
+  password        String
+  phone           String?
+  avatar          String?
+  isVerified      Boolean   @default(false)
+  isActive        Boolean   @default(true)
+  role            UserRole  @default(USER)
+  reputation      Float     @default(0.0)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  // Relaciones
+  createdGroups   Group[]   @relation("GroupCreator")
+  groupMembers    GroupMember[]
+  orders          Order[]
+  reviews         Review[]  @relation("ReviewAuthor")
+  receivedReviews Review[]  @relation("ReviewTarget")
+  notifications   Notification[]
+  addresses       Address[]
+
+  @@map("users")
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String
+  description String?
+  image       String?
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  products    Product[]
+
+  @@map("categories")
+}
+
+model Product {
+  id              String    @id @default(cuid())
+  name            String
+  description     String
+  basePrice       Float
+  images          String[]
+  specifications  Json?
+  brand           String?
+  model           String?
+  isActive        Boolean   @default(true)
+  minGroupSize    Int       @default(2)
+  maxGroupSize    Int       @default(100)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  categoryId      String
+  category        Category  @relation(fields: [categoryId], references: [id])
+
+  priceTiers      PriceTier[]
+  groups          Group[]
+
+  @@map("products")
+}
+
+model PriceTier {
+  id            String  @id @default(cuid())
+  minQuantity   Int
+  maxQuantity   Int?
+  discountPercent Float
+  finalPrice    Float
+
+  productId     String
+  product       Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("price_tiers")
+}
+
+model Group {
+  id              String      @id @default(cuid())
+  title           String
+  description     String?
+  targetQuantity  Int
+  currentQuantity Int         @default(0)
+  status          GroupStatus @default(OPEN)
+  endDate         DateTime
+  deliveryAddress String?
+  deliveryDate    DateTime?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  creatorId       String
+  creator         User        @relation("GroupCreator", fields: [creatorId], references: [id])
+  
+  productId       String
+  product         Product     @relation(fields: [productId], references: [id])
+
+  members         GroupMember[]
+  orders          Order[]
+  notifications   Notification[]
+
+  @@map("groups")
+}
+
+model GroupMember {
+  id          String           @id @default(cuid())
+  quantity    Int              @default(1)
+  status      MemberStatus     @default(PENDING)
+  joinedAt    DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  userId      String
+  user        User             @relation(fields: [userId], references: [id])
+  
+  groupId     String
+  group       Group            @relation(fields: [groupId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, groupId])
+  @@map("group_members")
+}
+
+model Order {
+  id              String        @id @default(cuid())
+  orderNumber     String        @unique
+  totalAmount     Float
+  shippingCost    Float         @default(0)
+  tax             Float         @default(0)
+  status          OrderStatus   @default(PENDING)
+  paymentStatus   PaymentStatus @default(PENDING)
+  paymentMethod   String?
+  paymentId       String?
+  shippingAddress Json
+  trackingNumber  String?
+  notes           String?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  userId          String
+  user            User          @relation(fields: [userId], references: [id])
+  
+  groupId         String
+  group           Group         @relation(fields: [groupId], references: [id])
+
+  orderItems      OrderItem[]
+  notifications   Notification[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id          String  @id @default(cuid())
+  quantity    Int
+  unitPrice   Float
+  totalPrice  Float
+
+  orderId     String
+  order       Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("order_items")
+}
+
+model Address {
+  id            String  @id @default(cuid())
+  label         String
+  streetAddress String
+  city          String
+  state         String
+  postalCode    String
+  country       String
+  isDefault     Boolean @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  userId        String
+  user          User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("addresses")
+}
+
+model Review {
+  id          String    @id @default(cuid())
+  rating      Int       // 1-5 stars
+  comment     String?
+  isVerified  Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  authorId    String
+  author      User      @relation("ReviewAuthor", fields: [authorId], references: [id])
+  
+  targetId    String
+  target      User      @relation("ReviewTarget", fields: [targetId], references: [id])
+
+  @@map("reviews")
+}
+
+model Notification {
+  id          String            @id @default(cuid())
+  title       String
+  message     String
+  type        NotificationType
+  isRead      Boolean           @default(false)
+  data        Json?
+  createdAt   DateTime          @default(now())
+
+  userId      String
+  user        User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  groupId     String?
+  group       Group?            @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  
+  orderId     String?
+  order       Order?            @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("notifications")
+}
+
+enum UserRole {
+  USER
+  ADMIN
+  MODERATOR
+}
+
+enum GroupStatus {
+  OPEN
+  FULL
+  ACTIVE
+  COMPLETED
+  CANCELLED
+  EXPIRED
+}
+
+enum MemberStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  REJECTED
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+  PARTIAL_REFUND
+}
+
+enum NotificationType {
+  GROUP_INVITE
+  GROUP_FULL
+  GROUP_CANCELLED
+  ORDER_CONFIRMED
+  ORDER_SHIPPED
+  ORDER_DELIVERED
+  PAYMENT_SUCCESS
+  PAYMENT_FAILED
+  REVIEW_REQUEST
+  SYSTEM_ANNOUNCEMENT
+} 

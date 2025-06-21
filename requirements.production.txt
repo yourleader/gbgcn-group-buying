@@ -1,0 +1,53 @@
+# Core FastAPI and web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic[email]==2.5.0
+pydantic-settings==2.1.0
+
+# PyTorch and Deep Learning (matching Dockerfile versions)
+torch==2.1.1
+torch-geometric==2.4.0
+numpy==1.24.3
+scipy==1.11.4
+
+# Database and ORM
+sqlalchemy==2.0.23
+alembic==1.13.0
+asyncpg==0.29.0
+psycopg2-binary==2.9.9
+
+# Graph processing (for GBGCN heterogeneous graphs)
+networkx==3.2.1
+
+# Machine Learning and Data Processing
+scikit-learn==1.3.0
+pandas==2.0.3
+joblib==1.3.2
+
+# Authentication and Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# HTTP and API utilities
+httpx==0.25.2
+aiofiles==23.2.1
+python-dotenv==1.0.0
+
+# Caching and Background Processing (CRITICAL for GBGCN)
+redis==5.0.1
+celery==5.3.4
+
+# Monitoring and Logging
+loguru==0.7.2
+
+# Development and Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Additional utilities
+requests==2.31.0
+typing-extensions==4.8.0
+
+# For background training scheduling
+schedule==1.2.0 

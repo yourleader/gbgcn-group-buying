@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15
+    container_name: groupbuy_postgres
+    environment:
+      POSTGRES_DB: groupbuy_db
+      POSTGRES_USER: groupbuy
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - groupbuy_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U groupbuy -d groupbuy_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: groupbuy_redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    networks:
+      - groupbuy_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Group Buying API (GBGCN)
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.simple
+    container_name: groupbuy_api
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://groupbuy:password@postgres:5432/groupbuy_db
+      - REDIS_URL=redis://redis:6379
+      - DEBUG=true
+      - ENVIRONMENT=development
+      - SECRET_KEY=your-super-secret-key-for-development-change-in-production
+      # GBGCN Model Parameters
+      - EMBEDDING_DIM=64
+      - NUM_GCN_LAYERS=3
+      - DROPOUT_RATE=0.1
+      - LEARNING_RATE=0.001
+      - ALPHA=0.6
+      - BETA=0.4
+      - BATCH_SIZE=512
+      - MAX_EPOCHS=50
+      - PATIENCE=10
+      - MODEL_SAVE_PATH=/app/models
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./models:/app/models
+      - ./logs:/app/logs
+    networks:
+      - groupbuy_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  groupbuy_network:
+    driver: bridge 

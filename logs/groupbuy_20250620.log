@@ -1,0 +1,300 @@
+2025-06-20 17:47:45 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:47:45 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:47:46 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:48:40 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:48:40 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:48:40 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:48:40 - groupbuy - INFO - Database initialized
+2025-06-20 17:48:40 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:48:40 - groupbuy.model - INFO - Created new GBGCN model - Users: 1000, Items: 500
+2025-06-20 17:48:40 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:48:40 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:48:57 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:48:57 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:48:57 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:48:57 - groupbuy - INFO - Database initialized
+2025-06-20 17:48:57 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:48:57 - groupbuy.model - INFO - Created new GBGCN model - Users: 1000, Items: 500
+2025-06-20 17:48:57 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:48:57 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:49:41 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:49:41 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:49:41 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:49:41 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:49:45 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:49:45 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:49:45 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:49:45 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:49:45 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:49:45 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:49:45 - groupbuy - INFO - Database initialized
+2025-06-20 17:49:45 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:49:45 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:49:45 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:49:45 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:49:45 - groupbuy - INFO - Database initialized
+2025-06-20 17:49:45 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:49:45 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:49:45 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:49:45 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:49:48 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:49:48 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:49:48 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:49:49 - groupbuy - INFO - Database initialized
+2025-06-20 17:49:49 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:49:49 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:49:49 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:49:49 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:50:08 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\cesar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-20 17:50:22 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:50:22 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:50:22 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:50:22 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:50:26 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:50:26 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:50:26 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:50:26 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:50:26 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:50:26 - groupbuy - INFO - Database initialized
+2025-06-20 17:50:26 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:50:26 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:50:26 - groupbuy - INFO - Database initialized
+2025-06-20 17:50:26 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:50:26 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:50:26 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:50:26 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:50:26 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:50:26 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:50:26 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:50:35 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:50:35 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:50:35 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:50:35 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:50:39 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:50:39 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:50:39 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:50:39 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:50:39 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:50:39 - groupbuy - INFO - Database initialized
+2025-06-20 17:50:39 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:50:39 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:50:39 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:50:39 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:50:39 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:50:39 - groupbuy - INFO - Database initialized
+2025-06-20 17:50:39 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:50:39 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:50:39 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:50:39 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:51:02 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:51:02 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:51:02 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:51:02 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:51:05 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:51:05 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:51:06 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:51:06 - groupbuy - INFO - Database initialized
+2025-06-20 17:51:06 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:51:06 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:51:06 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:51:06 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:51:06 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:51:06 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:51:06 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:51:06 - groupbuy - INFO - Database initialized
+2025-06-20 17:51:06 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:51:06 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:51:06 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:51:06 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:51:10 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:51:10 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:51:10 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:51:10 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:51:10 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:51:10 - groupbuy - INFO - Database initialized
+2025-06-20 17:51:10 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:51:10 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:51:10 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:51:10 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:51:10 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:51:10 - groupbuy - INFO - Database initialized
+2025-06-20 17:51:10 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:51:10 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:51:10 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:51:10 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:51:21 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\cesar\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-06-20 17:53:27 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:53:27 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:53:31 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:53:31 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:53:31 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:53:31 - groupbuy - INFO - Database initialized
+2025-06-20 17:53:31 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:53:31 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:53:31 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:53:31 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:59:08 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:59:08 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:59:08 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:59:08 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:59:12 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:59:12 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:59:12 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:59:12 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:59:12 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:59:12 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:59:12 - groupbuy - INFO - Database initialized
+2025-06-20 17:59:12 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:59:12 - groupbuy - INFO - Database initialized
+2025-06-20 17:59:12 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:59:12 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:59:12 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:59:12 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:59:12 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:59:12 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:59:12 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:59:20 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:59:20 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 17:59:20 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:59:20 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 17:59:24 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 17:59:24 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:59:24 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 17:59:24 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:59:24 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 17:59:24 - groupbuy - INFO - Database initialized
+2025-06-20 17:59:24 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:59:24 - groupbuy - INFO - Database initialized
+2025-06-20 17:59:24 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 17:59:24 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:59:24 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:59:24 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 17:59:24 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 17:59:24 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 17:59:24 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 18:00:25 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 18:00:25 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 18:00:29 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 18:00:29 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 18:00:29 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 18:00:29 - groupbuy - INFO - Database initialized
+2025-06-20 18:00:29 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 18:00:29 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 18:00:29 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 18:00:29 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:48:29 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 19:48:29 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 19:48:32 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:48:32 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:48:33 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:48:33 - groupbuy - INFO - Database initialized
+2025-06-20 19:48:33 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:48:33 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:48:33 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:48:33 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:48:36 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:48:36 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:48:36 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:48:36 - groupbuy - INFO - Database initialized
+2025-06-20 19:48:36 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:48:36 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:48:36 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:48:36 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:48:51 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 19:48:51 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 19:48:54 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:48:54 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:48:54 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:48:54 - groupbuy - INFO - Database initialized
+2025-06-20 19:48:54 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:48:54 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:48:54 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:48:54 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:48:58 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 19:48:58 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 19:49:02 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:49:02 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:49:02 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:49:02 - groupbuy - INFO - Database initialized
+2025-06-20 19:49:02 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:49:02 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:49:02 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:49:02 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:49:08 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 19:49:08 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 19:49:11 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:49:11 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:49:11 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:49:11 - groupbuy - INFO - Database initialized
+2025-06-20 19:49:11 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:49:11 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:49:11 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:49:11 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:49:15 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:49:15 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:49:15 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:49:15 - groupbuy - INFO - Database initialized
+2025-06-20 19:49:15 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:49:15 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:49:15 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:49:15 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:50:12 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 19:50:12 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 19:50:16 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:50:16 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:50:16 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:50:16 - groupbuy - INFO - Database initialized
+2025-06-20 19:50:16 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:50:16 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:50:16 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:50:16 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:50:44 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 19:50:44 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 19:50:48 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:50:48 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:50:48 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:50:48 - groupbuy - INFO - Database initialized
+2025-06-20 19:50:48 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:50:48 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:50:48 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:50:48 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:50:54 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 19:50:54 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 19:50:58 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:50:58 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:50:58 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:50:58 - groupbuy - INFO - Database initialized
+2025-06-20 19:50:58 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:50:58 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:50:58 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:50:58 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:51:39 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 19:51:39 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 19:51:43 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:51:43 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:51:43 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:51:43 - groupbuy - INFO - Database initialized
+2025-06-20 19:51:43 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:51:43 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:51:43 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:51:43 - groupbuy - INFO - GBGCN model initialized successfully
+2025-06-20 19:52:40 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-20 19:52:40 - groupbuy.model - INFO - Model saved to models\gbgcn\gbgcn_model.pth
+2025-06-20 19:52:45 - groupbuy - INFO - Logging initialized - Level: INFO
+2025-06-20 19:52:45 - groupbuy - INFO - Log file: logs\groupbuy_20250620.log
+2025-06-20 19:52:45 - groupbuy - INFO - Starting Group Buying API based on GBGCN...
+2025-06-20 19:52:45 - groupbuy - INFO - Database initialized
+2025-06-20 19:52:45 - groupbuy.model - INFO - GBGCNTrainer initialized - Device: cpu
+2025-06-20 19:52:45 - groupbuy.model - INFO - Loaded GBGCN model from models\gbgcn\gbgcn_model.pth
+2025-06-20 19:52:45 - groupbuy.model - INFO - GBGCN trainer initialized successfully
+2025-06-20 19:52:45 - groupbuy - INFO - GBGCN model initialized successfully
