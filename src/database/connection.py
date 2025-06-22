@@ -11,21 +11,36 @@ import asyncio
 from src.core.config import settings
 from src.database.models import Base
 
+# Create engine configurations based on database type
+def get_engine_kwargs():
+    """Get engine kwargs based on database URL"""
+    if settings.DATABASE_URL.startswith(('postgresql', 'postgres')):
+        return {
+            'pool_size': settings.DATABASE_POOL_SIZE,
+            'max_overflow': settings.DATABASE_MAX_OVERFLOW,
+            'echo': settings.DEBUG
+        }
+    else:
+        # For SQLite, don't use pool settings
+        return {
+            'echo': settings.DEBUG
+        }
+
 # Sync engine for migrations and setup
+sync_database_url = settings.DATABASE_URL.replace("+asyncpg", "").replace("postgresql", "postgresql")
 sync_engine = create_engine(
-    settings.DATABASE_URL,
-    pool_size=settings.DATABASE_POOL_SIZE,
-    max_overflow=settings.DATABASE_MAX_OVERFLOW,
-    echo=settings.DEBUG
+    sync_database_url,
+    **get_engine_kwargs()
 )
 
 # Async engine for FastAPI
-async_database_url = settings.DATABASE_URL.replace("postgresql://", "postgresql+asyncpg://")
+async_database_url = settings.DATABASE_URL
+if not async_database_url.startswith('postgresql+asyncpg'):
+    async_database_url = settings.DATABASE_URL.replace("postgresql://", "postgresql+asyncpg://")
+
 async_engine = create_async_engine(
     async_database_url,
-    pool_size=settings.DATABASE_POOL_SIZE,
-    max_overflow=settings.DATABASE_MAX_OVERFLOW,
-    echo=settings.DEBUG
+    **get_engine_kwargs()
 )
 
 # Session makers

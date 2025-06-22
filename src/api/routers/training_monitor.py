@@ -43,6 +43,8 @@ class TrainingMetrics(BaseModel):
     map_score: float
 
 class ModelStats(BaseModel):
+    model_config = {"protected_namespaces": ()}  # Allow model_ fields
+    
     model_version: str
     last_training: Optional[datetime]
     total_parameters: int

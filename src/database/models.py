@@ -24,6 +24,7 @@ class UserRole(str, Enum):
     MODERATOR = "MODERATOR"
 
 class GroupStatus(str, Enum):
+    FORMING = "FORMING"     # Initial state - group is being formed
     OPEN = "OPEN"           # Group is accepting participants
     FULL = "FULL"           # Target quantity reached
     ACTIVE = "ACTIVE"       # Group buying is in progress
@@ -33,6 +34,7 @@ class GroupStatus(str, Enum):
 
 class MemberStatus(str, Enum):
     PENDING = "PENDING"     # Waiting for confirmation
+    ACTIVE = "ACTIVE"       # Active member
     CONFIRMED = "CONFIRMED" # Confirmed participant
     CANCELLED = "CANCELLED" # User cancelled
     REJECTED = "REJECTED"   # Rejected by initiator
@@ -185,9 +187,15 @@ class Group(Base):
     current_quantity = Column(Integer, default=0)
     min_participants = Column(Integer, default=2)
     
+    # Alternative naming for consistency with service layer
+    target_size = Column(Integer, nullable=False)
+    current_size = Column(Integer, default=0)
+    min_size = Column(Integer, default=2)
+    
     # Status and timing
-    status = Column(String(20), default=GroupStatus.OPEN, index=True)
+    status = Column(String(20), default=GroupStatus.FORMING, index=True)
     end_date = Column(DateTime, nullable=False)
+    end_time = Column(DateTime, nullable=False)  # Alternative naming
     
     # Delivery information
     delivery_address = Column(Text)
@@ -196,6 +204,16 @@ class Group(Base):
     # Financial information
     current_price_per_unit = Column(Float)
     total_amount = Column(Float, default=0.0)
+    
+    # Additional pricing fields for service layer compatibility
+    original_price = Column(Float, nullable=False)
+    current_price = Column(Float, nullable=False)
+    target_price = Column(Float, nullable=False)
+    
+    # Completion tracking
+    completion_time = Column(DateTime)
+    gbgcn_success_prediction = Column(Float)
+    gbgcn_prediction_updated_at = Column(DateTime)
     
     # Foreign keys
     creator_id = Column(String, ForeignKey("users.id"), nullable=False)

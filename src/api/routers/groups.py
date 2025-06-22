@@ -113,8 +113,52 @@ async def create_group(
             detail="Minimum size cannot be greater than target size"
         )
     
-    # Check if item exists (would implement item validation here)
-    # For now, assume item_id is valid
+    # Check if item exists and is valid for group buying
+    item_result = await db.execute(select(Item).where(Item.id == group_data.item_id))
+    item = item_result.scalar_one_or_none()
+    
+    if not item:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Item not found"
+        )
+    
+    if not item.is_active or not item.is_group_buyable:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Item is not available for group buying"
+        )
+    
+    # Validate target_price against item's base_price
+    if group_data.target_price >= item.base_price:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Target price must be lower than base price to provide discount"
+        )
+    
+    # Calculate minimum allowed target price (5% discount minimum)
+    min_target_price = item.base_price * (1 - settings.MAX_DISCOUNT_PERCENTAGE)
+    if group_data.target_price < min_target_price:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Target price too low. Minimum allowed: {min_target_price:.2f}"
+        )
+    
+    # Check if user has too many active groups
+    user_active_groups = await db.execute(
+        select(func.count(Group.id))
+        .where(and_(
+            Group.creator_id == str(current_user.id),
+            Group.status.in_(['FORMING', 'OPEN', 'ACTIVE'])
+        ))
+    )
+    active_count = user_active_groups.scalar()
+    
+    if active_count >= 5:  # Maximum 5 active groups per user
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="You can only have 5 active groups at a time"
+        )
     
     # Calculate deadline
     deadline = datetime.utcnow() + timedelta(days=group_data.duration_days)

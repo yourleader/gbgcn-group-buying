@@ -100,8 +100,15 @@ def get_api_logger() -> logging.Logger:
     """Get logger for API components"""
     return get_logger("api")
 
-def get_model_logger() -> logging.Logger:
-    """Get logger for GBGCN model components"""
+def get_model_logger(name: Optional[str] = None) -> logging.Logger:
+    """
+    Get logger for GBGCN model components
+    
+    Args:
+        name: Optional specific module name. If None, uses "model"
+    """
+    if name:
+        return get_logger(f"model.{name}")
     return get_logger("model")
 
 def get_database_logger() -> logging.Logger:

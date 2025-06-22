@@ -69,7 +69,7 @@ class GroupService:
                 raise ValueError(f"Item {item_id} not found")
             
             # Calculate pricing
-            original_price = float(item.price)
+            original_price = float(item.base_price)
             discount_percentage = await self._calculate_discount_percentage(
                 target_size, item, db
             )
@@ -381,7 +381,7 @@ class GroupService:
                     'title': group.item.title,
                     'category': group.item.category,
                     'description': group.item.description,
-                    'original_price': float(group.item.price)
+                    'original_price': float(group.item.base_price)
                 },
                 'initiator': {
                     'id': group.initiator.id,

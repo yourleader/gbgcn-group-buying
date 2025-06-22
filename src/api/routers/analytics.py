@@ -45,6 +45,8 @@ class SystemMetrics(BaseModel):
 
 class GBGCNMetrics(BaseModel):
     """GBGCN model performance metrics"""
+    model_config = {"protected_namespaces": ()}  # Allow model_ fields
+    
     model_accuracy: float
     recommendation_precision: float
     recommendation_recall: float

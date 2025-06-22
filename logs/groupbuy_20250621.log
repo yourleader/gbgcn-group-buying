@@ -447,3 +447,5 @@ FROM user_item_interactions
 2025-06-21 15:34:10 - groupbuy.model - INFO - GBGCN trainer initialized successfully
 2025-06-21 15:34:10 - groupbuy - INFO - GBGCN model initialized successfully
 2025-06-21 15:34:10 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-06-21 15:53:40 - groupbuy - INFO - Shutting down Group Buying API...
+2025-06-21 15:53:40 - groupbuy.model - INFO - Model saved to /app/models/gbgcn_model.pth
